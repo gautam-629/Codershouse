@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './StepPhoneEmail.module.css'
 import Phone from './Phone/Phone';
 import Email from './Email/Email';
-const StepPhoneEmail = () => {
+const StepPhoneEmail = ({onNext}) => {
   const phoneEmailMap = {
     phone: Phone,
     email: Email
@@ -21,7 +21,7 @@ const StepPhoneEmail = () => {
               <img src="/images/mail-white.png" alt="" />
             </button>
           </div>
-             <Component />
+             <Component onNext={onNext}/>
         </div>
       </div>
     
